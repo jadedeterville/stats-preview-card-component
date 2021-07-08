@@ -2,32 +2,29 @@
   margin: 0;
   padding: 0;
 }
- 
+
 body {
   background: hsl(233, 47%, 7%);
   overflow: hidden;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 25px;
   color: hsl(0, 0%, 100%);
+  padding-left: 30px;
+  padding-bottom: 15px;
 }
 
 h4 {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
   color: hsla(0, 0%, 100%, 0.6);
   padding-left: 30px;
 }
 
-h1 {
-  padding-left: 30px;
-  padding-bottom: 15px;
-}
-
 p {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
   color: hsla(0, 0%, 100%, 0.75);
   padding-left: 30px;
@@ -38,12 +35,13 @@ p {
 
 #card {
   display: flex;
+  flex: 1;
   background: hsl(244, 38%, 16%);
   /* top right bottom left */
-  margin: 150px 100px 150px 100px;
+  margin: 150px 300px 150px 300px;
   border-radius: 1%;
   align-items: center;
-  width: 600px;
+  /* width: 600px; */
 }
 
 .left-text {
@@ -70,36 +68,47 @@ p {
 .right-image {
   border-radius: 0 1% 1% 0;
   background-color: hsl(277, 64%, 61%);
+  height: 445px;
 }
 
 /* Image styling. Opacity will allow color beneath to show */
 .right-image img {
   width: 540px;
-  opacity: .4;
-  border-radius :0px 5px 5px 0px;
+  opacity: 0.4;
+  border-radius: 0px 5px 5px 0px;
 }
 
-
 /* Mobile Media Queries */
-@media(max-width: 1024px) {
-    
+@media (max-width: 1024px) {
   body {
     overflow: scroll;
   }
-  
+
   #card {
     display: flex;
-    flex-flow: wrap;
-    width: 100%;
+    flex: wrap;
+    margin: 30px 50px 30px 50px;
+    width: 350px;
   }
+  /* why wont this wrap in the card
+  #card p,
+  h1 {
+    display: flex;
+    flex-flow: wrap;
+  } */
+
+  /* .left-text h1,
+  p {
+    display: flex;
+    flex-wrap: wrap;
+  } */
 
   .right-image img {
     display: none;
   }
   .right-image::before {
     content: url('./img/image-header-mobile.jpg');
-    width: 100%;
-    height: 100%;
-    opacity: .4;
+    width: 350px;
+    opacity: 0.4;
   }
-  }
+}
