@@ -19,7 +19,7 @@ main {
 
 h1 {
   font-family: 'Inter', sans-serif;
-  font-size: 25px;
+  font-size: 40px;
   color: hsl(0, 0%, 100%);
   padding-left: 30px;
   padding-bottom: 15px;
@@ -39,7 +39,6 @@ p {
   padding-left: 30px;
   padding-top: 15px;
   padding-bottom: 60px;
-  width: 540px;
 }
 
 #card {
@@ -52,6 +51,7 @@ p {
   background: hsl(244, 38%, 16%);
   border-radius: 1%;
   padding-top: 75px;
+  width: 540px;
 }
 
 #card .left-text p {
@@ -72,12 +72,14 @@ p {
 /* Will display the stats in a row */
 #card .left-text #stats {
   display: flex;
+  justify-content: space-between;
+  width: 450px;
 }
 
 /* Overlay color and rounded edges */
 #card .right-image {
   border-radius: 0 1% 1% 0;
-  background-color: hsl(277, 64%, 61%);
+  background-color: hsl(277, 73%, 51%);
   height: 445px;
 }
 
